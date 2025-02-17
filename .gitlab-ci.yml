@@ -1,32 +1,18 @@
+# ไฟล์ .gitlab-ci.yml ใน thai-address repository
 variables:
   ATP_FRONTEND_PROJECT_ID: "57"
-  ATP_FRONTEND_RIGGER_TOKEN: "glptt-3143a18c773f8173bc95ee4cd00f06d28b43cf4d"
+  ATP_FRONTEND_BRANCH: "prod"
+  ATP_FRONTEND_TRIGGER_TOKEN: "glptt-3143a18c773f8173bc95ee4cd00f06d28b43cf4d"
 
 stages:
   - trigger
 
-.trigger_template: &trigger_definition
+trigger-atp-frontend:
   stage: trigger
   image: alpine:latest
   before_script:
     - apk add --no-cache curl
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-
-trigger-atp-frontend:
-  <<: *trigger_definition
-  script: |
-    curl -X POST --fail \
-      -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
-      -F ref=dev \
-      https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline
-
-    curl -X POST --fail \
-      -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
-      -F ref=prod-demo \
-      https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline
-
-    curl -X POST --fail \
-      -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
-      -F ref=prod \
-      https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline  # Fixed URL
+  script:
+    - "curl -X POST --fail -F token=${ATP_FRONTEND_TRIGGER_TOKEN} -F ref=${ATP_FRONTEND_BRANCH} https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline"
