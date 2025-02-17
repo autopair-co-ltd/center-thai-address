@@ -29,4 +29,4 @@ trigger-atp-frontend:
     curl -X POST --fail \
       -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
       -F ref=prod \
-      https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipelines
+      https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline  # Fixed URL
