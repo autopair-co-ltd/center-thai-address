@@ -1,7 +1,7 @@
 # ไฟล์ .gitlab-ci.yml ใน thai-address repository
 variables:
   ATP_FRONTEND_PROJECT_ID: "57"
-  ATP_FRONTEND_BRANCH: "main"
+  ATP_FRONTEND_BRANCH: "dev"
   TRIGGER_TOKEN: "glptt-3143a18c773f8173bc95ee4cd00f06d28b43cf4d"
 
 stages:
@@ -15,8 +15,4 @@ trigger-atp-frontend:
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
   script:
-    - |
-      curl --request POST \
-        --form "token=${TRIGGER_TOKEN}" \
-        --form "ref=${ATP_FRONTEND_BRANCH}" \
-        "https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline"
+    - "curl -X POST --fail -F token=${TRIGGER_TOKEN} -F ref=${ATP_FRONTEND_BRANCH} https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline"
