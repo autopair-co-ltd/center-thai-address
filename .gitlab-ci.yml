@@ -17,16 +17,16 @@ trigger-atp-frontend:
   <<: *trigger_definition
   script: |
     curl -X POST --fail \
-      -F token=${TRIGGER_TOKEN} \
+      -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
       -F ref=dev \
       https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline
 
     curl -X POST --fail \
-      -F token=${TRIGGER_TOKEN} \
+      -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
       -F ref=prod-demo \
       https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline
 
     curl -X POST --fail \
-      -F token=${TRIGGER_TOKEN} \
+      -F token=${ATP_FRONTEND_RIGGER_TOKEN} \
       -F ref=prod \
       https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipelines
