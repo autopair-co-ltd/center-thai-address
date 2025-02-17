@@ -9,8 +9,11 @@ stages:
 
 trigger-atp-frontend:
   stage: trigger
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache curl
   rules:
-    - if: $CI_COMMIT_BRANCH == "main"  # trigger เมื่อมีการ push เข้า main branch
+    - if: $CI_COMMIT_BRANCH == "main"
   script:
     - |
       curl --request POST \
