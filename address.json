@@ -1,5 +1,11 @@
 
 [
+   {
+        "district": "test",
+        "subdistrict": "พระบรมมหาราชวัง",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 9999
+    },
     {
         "district": "เขตพระนคร",
         "subdistrict": "พระบรมมหาราชวัง",
