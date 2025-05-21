@@ -1,5 +1,11 @@
 [
     {
+        "district": "เขตบึงกุ่ม",
+        "subdistrict": "นวลจันทร์",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 10230
+    },
+    {
         "district": "เขตพระนคร",
         "subdistrict": "พระบรมมหาราชวัง",
         "province": "กรุงเทพมหานคร",
