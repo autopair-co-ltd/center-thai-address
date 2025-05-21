@@ -1,4 +1,3 @@
-
 [
     {
         "district": "เขตพระนคร",
@@ -647,6 +646,12 @@
         "subdistrict": "ดินแดง",
         "province": "กรุงเทพมหานคร",
         "postalCode": 10400
+    },
+    {
+        "district": "เขตบึงกุ่ม",
+        "subdistrict": "บึงกุ่ม",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 10230
     },
     {
         "district": "เขตบึงกุ่ม",
