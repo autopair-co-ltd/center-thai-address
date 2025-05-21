@@ -1,18 +1,18 @@
-# ไฟล์ .gitlab-ci.yml ใน thai-address repository
-variables:
-  ATP_FRONTEND_PROJECT_ID: "57"
-  ATP_FRONTEND_BRANCH: "prod"
-  ATP_FRONTEND_TRIGGER_TOKEN: "glptt-3143a18c773f8173bc95ee4cd00f06d28b43cf4d"
+# # ไฟล์ .gitlab-ci.yml ใน thai-address repository
+# variables:
+#   ATP_FRONTEND_PROJECT_ID: "57"
+#   ATP_FRONTEND_BRANCH: "prod"
+#   ATP_FRONTEND_TRIGGER_TOKEN: "glptt-3143a18c773f8173bc95ee4cd00f06d28b43cf4d"
 
-stages:
-  - trigger
+# stages:
+#   - trigger
 
-trigger-atp-frontend:
-  stage: trigger
-  image: alpine:latest
-  before_script:
-    - apk add --no-cache curl
-  rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-  script:
-    - "curl -X POST --fail -F token=${ATP_FRONTEND_TRIGGER_TOKEN} -F ref=${ATP_FRONTEND_BRANCH} https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline"
+# trigger-atp-frontend:
+#   stage: trigger
+#   image: alpine:latest
+#   before_script:
+#     - apk add --no-cache curl
+#   rules:
+#     - if: $CI_COMMIT_BRANCH == "main"
+#   script:
+#     - "curl -X POST --fail -F token=${ATP_FRONTEND_TRIGGER_TOKEN} -F ref=${ATP_FRONTEND_BRANCH} https://gitlab.autopair.co/api/v4/projects/${ATP_FRONTEND_PROJECT_ID}/trigger/pipeline"
