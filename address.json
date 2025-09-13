@@ -1,5 +1,11 @@
 [
     {
+        "district": "เขตบางเขน",
+        "subdistrict": "ท่าแร้ง",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 10230
+    },
+    {
         "district": "เขตบึงกุ่ม",
         "subdistrict": "นวลจันทร์",
         "province": "กรุงเทพมหานคร",
