@@ -1075,6 +1075,12 @@
     },
     {
         "district": "เขตบางบอน",
+        "subdistrict": "คลองบางพราน",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 10150
+    },
+    {
+        "district": "เขตบางบอน",
         "subdistrict": "บางบอน",
         "province": "กรุงเทพมหานคร",
         "postalCode": 10150
