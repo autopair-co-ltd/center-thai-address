@@ -979,6 +979,12 @@
     },
     {
         "district": "เขตสะพานสูง",
+        "subdistrict": "ราษฎร์พัฒนา",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 10240
+    },
+    {
+        "district": "เขตสะพานสูง",
         "subdistrict": "สะพานสูง",
         "province": "กรุงเทพมหานคร",
         "postalCode": 10240
