@@ -973,6 +973,12 @@
     },
     {
         "district": "เขตคันนายาว",
+        "subdistrict": "รามอินทรา",
+        "province": "กรุงเทพมหานคร",
+        "postalCode": 10230
+    },
+    {
+        "district": "เขตคันนายาว",
         "subdistrict": "คันนายาว",
         "province": "กรุงเทพมหานคร",
         "postalCode": 10230
